@@ -48,13 +48,13 @@ body {
     margin: 0;
 }
 
-.dropdown-wrapper.open .list {
+.list_wrapper.open, .list {
     transform: translate(0, 20px);
     opacity: 1;
     visibility: visible;
 }
 
-.dropdown-wrapper .list {
+.list_wrapper .list {
     position: absolute;
     top: 100%;
     left: 0;
@@ -91,7 +91,7 @@ body {
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 
-.dropdown-wrapper .dropdown:before {
+.list_wrapper .list:before {
     content: '';
     position: absolute;
     top: -6px;
@@ -107,7 +107,7 @@ body {
     mix-blend-mode: multiple;
 }
 
-.dropdown-wrapper .dropdown li {
+.list_wrapper .list .listItem {
     z-index: 1;
     position: relative;
     background: #FFFFFF;
@@ -115,23 +115,23 @@ body {
     color: #666;
 }
 
-.dropdown-wrapper .dropdown li.active {
+.list_wrapper .list .listItem.active {
     color: #5380F7;
 }
 
-.dropdown-wrapper .dropdown li:first-child {
+.list_wrapper .list .listItem:first-child {
     border-radius: 4px 4px 0 0;
 }
 
-.dropdown-wrapper .dropdown li:last-child {
+.list_wrapper .list .listItem:last-child {
     border-radius: 0 0 4px 4px;
 }
 
-.dropdown-wrapper .dropdown li:last-child a {
+.list_wrapper .list .listItem:last-child a {
     border-bottom: 0;
 }
 
-.dropdown-wrapper .dropdown a {
+.list_wrapper .list a {
     display: block;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding: 16px 0;

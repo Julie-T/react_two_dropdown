@@ -9,7 +9,7 @@ const DropdownList = (props) => {
   const viewElements = props.isShow ? props.elements.map((item) => 
     <li className='listItem' key={2+item.id}>
       <button key={item.id} 
-        className= {`droppedItem_${choice}`}
+        className= {`item droppedItem_${choice}`}
         onClick={() => {
             setChoice(!item.value)
             item.value = !item.value

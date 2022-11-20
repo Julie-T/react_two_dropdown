@@ -15,11 +15,14 @@ const Dropdown = (props) => {
 
     return (
     <div className='container'>
+    <div className='list_wrapper'>
         <button className='mainButton' onClick={() => handleClick()}>
         <span>Account Settings</span>
-        <i class="material-icons">public</i>
+        <i className="material-icons">public</i>
         </button>
+        
         <DropdownList className='list' isShow={count} elements={items}/>
+        </div>
     </div>
   )
 }
