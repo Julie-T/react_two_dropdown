@@ -1,19 +1,18 @@
-import React, { useState} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import items from '../models/DropdownItem'
+import '../css/main.css'
 
 const DropdownList = (props) => {
 
   const [choice, setChoice] = React.useState(false)
 
   const viewElements = props.isShow ? props.elements.map((item) => 
-    <li key={2+item.id}>
+    <li className='listItem' key={2+item.id}>
       <button key={item.id} 
-        className= {`droppedItem_${choice}`} 
-        isсhosen={choice} 
+        className= {`droppedItem_${choice}`}
         onClick={() => {
-            setChoice(!items.value)
-            items.value = !items.value
+            setChoice(!item.value)
+            item.value = !item.value
           }}> 
         {item.name} 
       </button>

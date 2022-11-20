@@ -1,7 +1,8 @@
-import React, { useState} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import DropdownList from './DropdownList'
 import items from '../models/DropdownItem'
+import '../css/main.css'
 
 const Dropdown = (props) => {
 
@@ -13,10 +14,13 @@ const Dropdown = (props) => {
     }
 
     return (
-    <>
-        <button onClick={() => handleClick()}>Account settings</button>
-        <DropdownList isShow={count} elements={items}/>
-    </>
+    <div className='container'>
+        <button className='mainButton' onClick={() => handleClick()}>
+        <span>Account Settings</span>
+        <i class="material-icons">public</i>
+        </button>
+        <DropdownList className='list' isShow={count} elements={items}/>
+    </div>
   )
 }
 
