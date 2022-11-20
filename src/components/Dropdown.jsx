@@ -6,11 +6,11 @@ import '../css/main.css'
 
 const Dropdown = (props) => {
 
-    const [count, setCount] = React.useState(true)
+    const [isShow, setIsShow] = React.useState(true)
 
     const handleClick = (e) => {
-        setCount(!count)
-        console.log(count)
+        setIsShow(!isShow)
+        console.log(isShow)
     }
 
     return (
@@ -21,7 +21,7 @@ const Dropdown = (props) => {
         <i className="material-icons">public</i>
         </button>
         
-        <DropdownList className='list' isShow={count} elements={items}/>
+        <DropdownList className='list' isShow={isShow} elements={items}/>
         </div>
     </div>
   )
