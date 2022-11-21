@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import DropdownList from './DropdownList'
 import items from '../models/DropdownItem'
 import '../css/main.css'
@@ -29,6 +28,5 @@ const Dropdown = (props) => {
   )
 }
 
-Dropdown.propTypes = {}
 
 export default Dropdown

@@ -33,6 +33,10 @@ const DropdownList = (props) => {
   )
 }
 
-DropdownList.propTypes = {}
+DropdownList.propTypes = {
+  className: PropTypes.string.isRequired,
+  isShow: PropTypes.bool.isRequired,
+  elements: PropTypes.arrayOf(PropTypes.shape({name: PropTypes.string, value: PropTypes.bool, id: PropTypes.number })).isRequired
+}
 
 export default DropdownList 
