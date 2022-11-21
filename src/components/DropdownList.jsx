@@ -20,8 +20,8 @@ const DropdownList = (props) => {
 
   const viewElements = props.isShow ? elements.map((item) => 
     <li className={item.value ? 'list_item item_is_active' : 'list_item item_is_inactive'} key={item.id}>
-      <a href='#'
-        className= 'item'
+      <a href='/#/react'
+        className='item'
         onClick={() => choiceHandle(item)}> 
         {item.name} 
       </a>
