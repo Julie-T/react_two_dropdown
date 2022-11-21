@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
+}
+
 body {
     background: #F5F5F5;
     height: 100%;
@@ -16,6 +28,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .mainButton {
     outline: 0;
     display: inline-flex;
@@ -36,8 +49,7 @@ body {
     overflow: hidden;
     cursor: pointer;
 }
-
-.mainButton .material-icons {
+.material-icons {
     border-radius: 100%;
     animation: ripple 0.6s linear infinite;
 }
@@ -46,15 +58,6 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.list_wrapper.open, .list {
-    transform: translate(0, 20px);
-    opacity: 1;
-    visibility: visible;
-}
-
-.list_wrapper .list {
     position: absolute;
     top: 100%;
     left: 0;
@@ -67,31 +70,12 @@ body {
     visibility: hidden;
     transition: 0.3s ease;
 }
-
-.listItem {
-
+.list_open {
+    transform: translate(0, 20px);
+    opacity: 1;
+    visibility: visible;
 }
-
-
-
-.droppedItem {
-
-}
-
-.droppedItem_true {
-
-}
-
-.droppedItem_false {
-
-}
-
-
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
-
-.list_wrapper .list:before {
+.list:before {
     content: '';
     position: absolute;
     top: -6px;
@@ -107,52 +91,30 @@ body {
     mix-blend-mode: multiple;
 }
 
-.list_wrapper .list .listItem {
+.list_item {
     z-index: 1;
     position: relative;
     background: #FFFFFF;
     padding: 0 20px;
     color: #666;
 }
-
-.list_wrapper .list .listItem.active {
+.item_is_active {
     color: #5380F7;
 }
-
-.list_wrapper .list .listItem:first-child {
+.list_item:first-child {
     border-radius: 4px 4px 0 0;
 }
-
-.list_wrapper .list .listItem:last-child {
+.list_item:last-child {
     border-radius: 0 0 4px 4px;
 }
-
-.list_wrapper .list .listItem:last-child a {
+.list_item:last-child .item {
     border-bottom: 0;
 }
-
-.list_wrapper .list a {
+.item {
     display: block;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding: 16px 0;
     color: inherit;
     font-size: 14px;
     text-decoration: none;
-}
-
-@keyframes ripple {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
-    }
-    100% {
-        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
-    }
-}
-
-.item_is_active {
-    background-color: red;
-}
-
-.item_is_inactive {
-    background-color: aqua;
 }

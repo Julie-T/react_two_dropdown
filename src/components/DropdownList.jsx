@@ -4,33 +4,30 @@ import '../css/main.css'
 
 const DropdownList = (props) => {
 
-  const [choice, setChoice] = React.useState(false)
   const [elements, setElements] = React.useState(props.elements)
   const choiceHandle = (item) => {
-    // setChoice(!item.value)
+    
     const newElements = elements.map(element => {
       if (item.name === element.name) {
         element.value = true;
       } else element.value = false; 
-      
       return element;
     })
 
-    // item.value = !item.value
     setElements(newElements)
     console.log("asd", elements)
   }
 
   const viewElements = props.isShow ? elements.map((item) => 
-    <li className='listItem' key={item.id}>
-      <button 
-        className= {item.value ? 'item_is_active' : 'item_is_inactive'}
+    <li className={item.value ? 'list_item item_is_active' : 'list_item item_is_inactive'} key={item.id}>
+      <a href='#'
+        className= 'item'
         onClick={() => choiceHandle(item)}> 
         {item.name} 
-      </button>
+      </a>
     </li>) : <></>
   return (
-    <div>
+    <div className= { props.isShow ? 'list list_open' : 'list list_close'}>
       {viewElements} 
     </div>
   )

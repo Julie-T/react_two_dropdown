@@ -16,12 +16,14 @@ const Dropdown = (props) => {
     return (
     <div className='container'>
     <div className='list_wrapper'>
+
         <button className='mainButton' onClick={() => handleClick()}>
         <span>Account Settings</span>
         <i className="material-icons">public</i>
         </button>
         
-        <DropdownList className='list' isShow={isShow} elements={items}/>
+        <DropdownList className='DropdownList' isShow={isShow} elements={items}/>
+        
         </div>
     </div>
   )
